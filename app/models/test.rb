@@ -4,7 +4,7 @@ class Test < ApplicationRecord
   #has_and_belongs_to_many :users
   has_many :tests_users
   has_many :users, through: :tests_users
-  belongs_to :author, :class_name => 'User', :foreign_key => 'author_id'
+  belongs_to :author, class_name: 'User', foreign_key: 'author_id'
 
   class << self
     def find_by_category(title)
