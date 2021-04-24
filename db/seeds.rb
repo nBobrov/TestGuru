@@ -21,7 +21,7 @@ categories = Category.create!([{ title: 'Ruby'},
                                { title: 'SQL'}])
 
 tests = Test.create!([{ title: 'Ruby Test 1', level: 1, category_id: categories[0].id, author_id: User.where(name: 'admin').first.id },
-                      { title: 'Ruby Test 2', level: 2, category_id: categories[0].id, author_id: User.where(name: 'admin').first.id },
+                      { title: 'Ruby Test 2', level: 1, category_id: categories[0].id, author_id: User.where(name: 'admin').first.id },
                       { title: 'Ruby Test 3', level: 3, category_id: categories[0].id, author_id: User.where(name: 'admin').first.id },
                       { title: 'Rails Test 1',  level: 2, category_id: categories[1].id, author_id: User.where(name: 'admin').first.id },
                       { title: 'SQL Test 1',  level: 2, category_id: categories[2].id, author_id: User.where(name: 'admin').first.id }])
@@ -37,6 +37,8 @@ questions = Question.create!([{ body: 'Question 1 for Ruby Test 1', test_id: tes
 Answer.create!([{ body: 'Answer 1 for Question 1 Ruby Test 1', question_id: questions[0].id },
                 { body: 'Answer 1 for Question 2 Ruby Test 1', question_id: questions[1].id },
                 { body: 'Answer 2 for Question 2 Ruby Test 1', question_id: questions[1].id },
+                { body: 'Answer 3 for Question 2 Ruby Test 1', question_id: questions[1].id },
+                { body: 'Answer 4 for Question 2 Ruby Test 1', question_id: questions[1].id },
                 { body: 'Answer 3 for Question 2 Ruby Test 1', question_id: questions[2].id },
                 { body: 'Answer 1 for Question 1 Rails Test 1', question_id: questions[4].id },
                 { body: 'Answer 2 for Question 1 Rails Test 1', question_id: questions[4].id },
