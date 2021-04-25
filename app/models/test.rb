@@ -13,6 +13,11 @@ class Test < ApplicationRecord
   scope :middle, -> { where(level: 2..4) }
   scope :hard, -> { where(level: 5..Float::INFINITY) }
 
-  scope :title_array, -> { order(id: :desc).pluck(:title) }
-  scope :find_by_category, -> (title) { joins(:category).where(categories: {title: title}).title_array }
+  scope :find_by_category, -> (title) { joins(:category).where(categories: {title: title}) }
+
+  class << self
+    def get_tests_title_by_category(title)
+      find_by_category(title).order(id: :desc).pluck(:title)
+    end
+  end
 end

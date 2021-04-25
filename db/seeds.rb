@@ -51,6 +51,6 @@ TestsUser.create!([{ user_id: User.where(name: 'nk').first.id, test_id: tests[0]
                    { user_id: User.where(name: 'nk').first.id, test_id: tests[4].id },
                    { user_id: User.where(name: 'admin').first.id, test_id: tests[1].id, finished: true }])
 
-pp Test.find_by_category('Ruby')
+pp Test.get_tests_title_by_category('Ruby')
 pp User.where(name: 'nk').first.find_tests_by_level(2)
 pp Test.first.author.name
