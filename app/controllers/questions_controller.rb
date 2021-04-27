@@ -16,7 +16,7 @@ class QuestionsController < ApplicationController
   end
 
   def create
-    Question.create(question_params.merge({test_id: @test.id}))
+    @test.questions.create(question_params)
     render plain: 'Question has been created successfully'
   end
 
