@@ -16,8 +16,13 @@ class QuestionsController < ApplicationController
   end
 
   def create
-    @test.questions.create(question_params)
-    render plain: 'Question has been created successfully'
+    question = @test.questions.create(question_params)
+
+    if question.save
+      render plain: 'Question has been created successfully'
+    else
+      render inline: question.errors.full_messages.join('<br/>')
+    end
   end
 
   def destroy
