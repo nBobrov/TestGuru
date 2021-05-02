@@ -2,5 +2,14 @@
 
 <p><%= @question.body %></p>
 
+<h2>Answers:</h2>
+
+<%= link_to 'Add new question', new_question_answer_path(@question) %>
+
+<ol>
+  <%= render @question.answers %>
+</ol>
+
+
 <%= link_to 'Back', test_path(@question.test) %>
 <%= link_to 'Edit', edit_question_path(@question) %>
