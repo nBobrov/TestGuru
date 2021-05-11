@@ -1,2 +1,28 @@
 span.success { color:green }
+
 span.fail { color:red; }
+
+.flash {
+  border: 2px solid;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.flash.alert{
+  border-color: #ef2727;
+}
+.nav {
+  white-space:nowrap;
+}
+
+.nav_user {
+  text-align:right;
+  width:50%;
+  display:inline-block;
+}
+
+.nav_menu {
+  text-align:left;
+  width:50%;
+  display:inline-block;
+}
