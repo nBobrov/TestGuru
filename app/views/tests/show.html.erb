@@ -1,5 +1,7 @@
 <h1>Test &laquo;<%= @test.title %>&raquo;</h1>
 
+<%= link_to 'Back', tests_path %>
+
 <table>
   <tr>
     <th>Category</th>
@@ -9,7 +11,7 @@
   <tr>
     <td><%= @test.category.title %></td>
     <td><%= @test.level %></td>
-    <td><%= @test.author.name %></td>
+    <td><%= @test.author.present? ? @test.author.name : '-' %></td>
   </tr>
 </table>
 
@@ -18,10 +20,10 @@
 <table>
   <tr>
     <th>Body</th>
-    <th colspan="3">Actions</th>
+    <th colspan="4">Actions</th>
   </tr>
   <%= render @test.questions %>
 </table>
 
-<%= link_to 'Back', tests_path %>
+<%= link_to 'Edit test', edit_test_path(@test) %> |
 <%= link_to 'Add new question', new_test_question_path(@test) %>

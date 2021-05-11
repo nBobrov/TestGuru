@@ -1,0 +1,16 @@
+<h1>The <%= @test_passage.test.title %> Test was Completed!</h1>
+<%
+  if @test_passage.passed?
+    result_text = "The #{@test_passage.test.title} Test passed successfully."
+    result_class = 'success'
+  else
+    result_text = "The #{@test_passage.test.title} Test failed."
+    result_class = 'fail'
+  end
+%>
+
+<p>To pass the test successfully, you must answer <%= TestPassage::SUCCESSFUL_PERCENT %>% of the questions correctly.<p>
+<p>Your result: <%= tag.span "#{@test_passage.result.floor(2)}%", class: result_class %></p>
+<p><%= result_text %></p>
+
+<%= link_to 'Back to the list of tests', tests_path(@test_passage.test) %>

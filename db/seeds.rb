@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-TestsUser.delete_all
+TestPassage.delete_all
 Answer.delete_all
 Question.delete_all
 Test.delete_all
@@ -44,12 +44,12 @@ Answer.create!([{ body: 'Answer 1 for Question 1 Ruby Test 1', question_id: ques
                 { body: 'Answer 2 for Question 1 Rails Test 1', question_id: questions[4].id },
                 { body: 'Answer 2 for Question 1 SQL Test 1', question_id: questions[5].id }])
 
-TestsUser.create!([{ user_id: User.where(name: 'nk').first.id, test_id: tests[0].id, finished: true },
-                   { user_id: User.where(name: 'nk').first.id, test_id: tests[1].id },
-                   { user_id: User.where(name: 'nk').first.id, test_id: tests[2].id },
-                   { user_id: User.where(name: 'nk').first.id, test_id: tests[3].id },
-                   { user_id: User.where(name: 'nk').first.id, test_id: tests[4].id },
-                   { user_id: User.where(name: 'admin').first.id, test_id: tests[1].id, finished: true }])
+#TestPassage.create!([{ user_id: User.where(name: 'nk').first.id, test_id: tests[0].id, correct_questions: 13 },
+#                   { user_id: User.where(name: 'nk').first.id, test_id: tests[1].id },
+#                   { user_id: User.where(name: 'nk').first.id, test_id: tests[2].id },
+#                   { user_id: User.where(name: 'nk').first.id, test_id: tests[3].id },
+#                   { user_id: User.where(name: 'nk').first.id, test_id: tests[4].id },
+#                   { user_id: User.where(name: 'admin').first.id, test_id: tests[1].id, correct_questions: 3 }])
 
 pp Test.get_tests_title_by_category('Ruby')
 pp User.where(name: 'nk').first.find_tests_by_level(2)
