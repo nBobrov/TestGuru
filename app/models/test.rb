@@ -20,11 +20,4 @@ class Test < ApplicationRecord
       find_by_category(title).order(id: :desc).pluck(:title)
     end
   end
-
-  private
-
-  def set_user
-    @user = User.first
-  end
-
 end

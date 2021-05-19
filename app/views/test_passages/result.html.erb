@@ -10,7 +10,7 @@
 %>
 
 <p>To pass the test successfully, you must answer <%= TestPassage::SUCCESSFUL_PERCENT %>% of the questions correctly.<p>
-<p>Your result: <%= tag.span "#{@test_passage.result.floor(2)}%", class: result_class %></p>
+<p><%= @test_passage.user.email %>, your result: <%= tag.span "#{@test_passage.result.floor(2)}%", class: result_class %></p>
 <p><%= result_text %></p>
 
 <%= link_to 'Back to the list of tests', tests_path(@test_passage.test) %>
