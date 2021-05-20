@@ -13,8 +13,8 @@ Test.delete_all
 Category.delete_all
 User.delete_all
 
-User.create!([{ name: 'admin', email: 'admin@gmail.com' },
-              { name: 'nk', email: 'alexander.andreev@me.com' }])
+User.create!([{ name: 'admin', email: 'admin@gmail.com', password: '123edsadsadsa' },
+              { name: 'nk', email: 'alexander.andreev@me.com', password: '123edsadsadsa' }])
 
 categories = Category.create!([{ title: 'Ruby'},
                                { title: 'Rails'},

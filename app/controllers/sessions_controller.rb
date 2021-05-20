@@ -1,7 +1,4 @@
 class SessionsController < ApplicationController
-  def new
-  end
-
   def create
     user = User.find_by(email: params[:email])
 
@@ -12,11 +9,5 @@ class SessionsController < ApplicationController
       flash.now['alert'] = 'Are you Gury? Verify your Email and Password please'
       render :new
     end
-  end
-
-
-  def destroy
-    reset_session
-    redirect_to login_path
   end
 end

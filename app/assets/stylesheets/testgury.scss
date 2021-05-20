@@ -11,6 +11,11 @@ span.fail { color:red; }
 .flash.alert{
   border-color: #ef2727;
 }
+
+.flash.notice{
+  border-color: #3c85e0;
+}
+
 .nav {
   white-space:nowrap;
 }
@@ -25,4 +30,31 @@ span.fail { color:red; }
   text-align:left;
   width:50%;
   display:inline-block;
+}
+
+.nav.nav_admin {
+  height: 35px;
+  padding: 15px;
+  line-height: 35px;
+  color: #ffffff;
+  background-color: #4293e6;
+  margin-bottom: 40px;
+}
+
+.nav_admin.title {
+  font-size: 140%;
+  font-weight: bold;
+}
+
+.nav_admin.user {
+  float: right;
+}
+
+.nav_admin.user-email {
+  text-decoration: underline;
+}
+
+.nav.nav_admin
+a{
+  color: #ffffff;
 }
