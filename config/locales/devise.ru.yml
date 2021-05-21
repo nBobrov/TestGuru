@@ -47,6 +47,7 @@ ru:
       updated_but_not_signed_in: "Your account has been updated successfully, but since your password was changed, you need to sign in again."
     sessions:
       signed_in: "Signed in successfully."
+      signed_in_custom: "Welcome, %{first_name} %{last_name}! Signed in successfully."
       signed_out: "Signed out successfully."
       already_signed_out: "Signed out successfully."
     unlocks:
@@ -62,4 +63,5 @@ ru:
       not_locked: "was not locked"
       not_saved:
         one: "1 error prohibited this %{resource} from being saved:"
+        few: "%{count} errors prohibited this %{resource} from being saved:"
         other: "%{count} errors prohibited this %{resource} from being saved:"
