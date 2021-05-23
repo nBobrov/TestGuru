@@ -4,6 +4,7 @@ class ApplicationController < ActionController::Base
                 if: -> { request.get? && is_navigational_format? }
   before_action :authenticate_user!, unless: :devise_controller?
   before_action :configure_permitted_parameters, if: :devise_controller?
+  before_action :set_locale
   protect_from_forgery with: :exception
 
   private
@@ -23,5 +24,13 @@ class ApplicationController < ActionController::Base
     else
       stored_location_for(resource) || tests_path
     end
+  end
+
+  def default_url_options
+    { lang: I18n.locale}
+  end
+
+  def set_locale
+    I18n.locale = I18n.locale_available?(params[:lang]) ? params[:lang] : I18n.default_locale
   end
 end

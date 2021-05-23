@@ -31,3 +31,53 @@
 
 ru:
   hello: "Привет мир"
+
+  helpers:
+    submit:
+      test:
+        create: "Создать тест"
+        update: "Обновить тест"
+    label:
+      test:
+        title: "Заголовок"
+        category_id: "Категория"
+        level: "Уровень"
+
+  shared:
+    errors:
+      header:
+        few: "Обнаружено %{count} ошибки:"
+        many: "Обнаружено %{count} ошибок:"
+        one: "Обнаружено %{count} ошибка:"
+        other: "Обнаружено %{count} ошибки:"
+
+  tests:
+    index:
+      header: "Доступные тесты"
+      title: "Заголовок"
+      category: "Категория"
+      level: "Уровень"
+      author: "Автор"
+      questions_count: "Количество вопросов"
+      actions: "Действия"
+
+  test_passages:
+    result:
+      header: "Тест %{title} успешно завершен!"
+
+  admin:
+    tests:
+      index:
+        header: "Доступные тесты"
+        title: "Название"
+        category: "Категория"
+        level: "Уровень"
+        author: "Автор"
+        questions_count: "Количество вопросов"
+        actions: "Действия"
+      create:
+        success: "Тест успешно создан."
+
+  tests_mailer:
+    completed_test:
+      subject: 'Вы успешно завершили тест на TestGuru!'
