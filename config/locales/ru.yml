@@ -1,6 +1,12 @@
 ru:
   hello: "Привет мир"
 
+  layouts:
+    application:
+      title: "TestGuru"
+    admin:
+      title: "Панель администратора | TestGuru"
+
   helpers:
     submit:
       test:
@@ -24,6 +30,11 @@ ru:
         title: "Название"
       question:
         body: "Текст вопроса"
+    questions_helper:
+      question_header:
+        new: "Создание вопроса для теста %{title}"
+        edit: "Редактирование вопроса для теста %{title}"
+
   shared:
     errors:
       header:
@@ -31,6 +42,14 @@ ru:
         many: "Обнаружено %{count} ошибок:"
         one: "Обнаружено %{count} ошибка:"
         other: "Обнаружено %{count} ошибки:"
+    header:
+      sign_in: "Войти"
+      sign_up: "Зарегистрироваться"
+      logout: "Выйти"
+      welcome: "Добро пожаловать"
+    footer:
+      app_description: "приложение для создания и выполнения онлайн тестов"
+      project:  "Учебный проект в онлайн-школе Thinknetica"
 
   tests:
     index:
@@ -57,6 +76,10 @@ ru:
       questions_info: "Вопрос %{number_current_question} из %{question_count}"
       next: "Далее"
   admin:
+    nav:
+      panel_name: "TestGuru Панель администратора"
+      welcome: "Добро пожаловать"
+      logout: "Выйти"
     tests:
       index:
         header: "Доступные тесты"
@@ -94,6 +117,44 @@ ru:
         edit: "Редактировать"
         delete: "Удалить"
         confirm_delete: "Вы уверены?"
+
+    questions:
+      question:
+        show: "Открыть"
+        edit: "Редактировать"
+        delete: "Удалить"
+        confirm_delete: "Вы уверены?"
+      new:
+        back: "Назад"
+      edit:
+        back: "Назад"
+      show:
+        header: "Вопрос"
+        back: "Назад"
+        answers: "Ответы:"
+        link:
+          add_answer: "Добавить новый ответ"
+          edit_question: "Редактировать вопрос"
+
+    answers:
+      answer:
+        show: "Открыть"
+        edit: "Редактировать"
+        delete: "Удалить"
+        confirm_delete: "Вы уверены?"
+      new:
+        header: "Новый ответ"
+        back: "Назад"
+      edit:
+        header: "Редактирование ответа"
+        back: "Назад"
+        show: "Открыть"
+      show:
+        header: "Вопрос"
+        back: "Назад"
+        answer: "Ответ:"
+        correct: "Верный:"
+
   tests_mailer:
     completed_test:
       subject: 'Вы успешно завершили тест на TestGuru!'

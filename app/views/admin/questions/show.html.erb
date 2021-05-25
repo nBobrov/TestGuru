@@ -1,14 +1,14 @@
-<h1>Question</h1>
+<h1><%= t('.header') %></h1>
 
-<%= link_to 'Back', admin_test_path(@question.test) %>
+<%= link_to t('.back'), admin_test_path(@question.test) %>
 
 <p><%= @question.body %></p>
 
-<h2>Answers:</h2>
+<h2><%= t('.answers') %></h2>
 
 <ol>
   <%= render @question.answers %>
 </ol>
 
-<%= link_to 'Edit question', edit_admin_question_path(@question) %> |
-<%= link_to 'Add new answer', new_admin_question_answer_path(@question) %>
+<%= link_to t('.link.edit_question'), edit_admin_question_path(@question) %> |
+<%= link_to t('.link.add_answer'), new_admin_question_answer_path(@question) %>

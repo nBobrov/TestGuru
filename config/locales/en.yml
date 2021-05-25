@@ -32,6 +32,12 @@
 en:
   hello: "Hello world"
 
+  layouts:
+    application:
+      title: "TestGuru"
+    admin:
+      title: "Admin Panel | TestGuru"
+
   helpers:
     submit:
       test:
@@ -55,12 +61,24 @@ en:
         title: "Title"
       question:
         body: "Body"
+    questions_helper:
+      question_header:
+        edit: "Create New %{title} Question"
+        new: "Edit %{title} Question"
 
   shared:
     errors:
       header:
         one: "%{count} error  detected:"
         other: "%{count} errors detected:"
+    header:
+      sign_in: "Sign in"
+      sign_up: "Sign up"
+      logout: "Exit"
+      welcome: "Welcome"
+    footer:
+      app_description: "приложение для создания и выполнения онлайн тестов"
+      project:  "Учебный проект в онлайн-школе Thinknetica"
 
   tests:
     index:
@@ -87,6 +105,10 @@ en:
       questions_info: "Questions %{number_current_question} of %{question_count}"
       next: "Next"
   admin:
+    nav:
+      panel_name: "TestGuru Admin Panel"
+      welcome: "Welcome"
+      logout: "Logout"
     tests:
       index:
         header: "Tricky tests"
@@ -124,6 +146,44 @@ en:
         edit: "Edit"
         delete: "Delete"
         confirm_delete: "Are you sure?"
+
+    questions:
+      question:
+        show: "Show"
+        edit: "Edit"
+        delete: "Delete"
+        confirm_delete: "Are you sure?"
+      new:
+        back: "Back"
+      edit:
+        back: "Back"
+      show:
+        header: "Question"
+        back: "Back"
+        answers: "Answers:"
+        link:
+          add_answer: "Add new answer"
+          edit_question: "Edit question"
+
+    answers:
+      answer:
+        show: "Show"
+        edit: "Edit"
+        delete: "Delete"
+        confirm_delete: "Are you sure?"
+      new:
+        header: "New Answer"
+        back: "Back"
+      edit:
+        header: "Editing Answer"
+        back: "Back"
+        show: "Show"
+      show:
+        header: "Question"
+        back: "Back"
+        answer: "Answer:"
+        correct: "Correct:"
+
   tests_mailer:
     completed_test:
       subject: 'You just completed the TestGuru test!'
