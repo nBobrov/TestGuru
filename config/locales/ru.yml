@@ -1,34 +1,3 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# The following keys must be escaped otherwise they will not be retrieved by
-# the default I18n backend:
-#
-# true, false, on, off, yes, no
-#
-# Instead, surround them with single quotes.
-#
-# en:
-#   'true': 'foo'
-#
-# To learn more, please read the Rails Internationalization guide
-# available at https://guides.rubyonrails.org/i18n.html.
-
 ru:
   hello: "Привет мир"
 
@@ -41,8 +10,20 @@ ru:
       test:
         title: "Заголовок"
         category_id: "Категория"
-        level: "Уровень"
-
+        level: "Уровень сложности"
+      user:
+        first_name: "Имя"
+        last_name: "Фамилия"
+        email: "Email"
+        password: "Пароль"
+        password_confirmation: "Подтверждение пароля"
+      answer:
+        body: "Текст ответа"
+        correct: "Верный"
+      category:
+        title: "Название"
+      question:
+        body: "Текст вопроса"
   shared:
     errors:
       header:
@@ -60,11 +41,21 @@ ru:
       author: "Автор"
       questions_count: "Количество вопросов"
       actions: "Действия"
+    test:
+      start: "Начать"
 
   test_passages:
     result:
       header: "Тест %{title} успешно завершен!"
-
+      back: "Перейти на страницу с тестами"
+      successful_result: "Тест %{title} пройден успешно."
+      unsuccessful_result: "Тест %{title} не пройден."
+      result_notice: "Для успешного прохождения теста, вы должны правильно ответить на %{successful_result}% вопросов."
+      result_info: "%{user_email}, ваш результат: "
+    show:
+      header: "Прохождение теста \"%{title}\""
+      questions_info: "Вопрос %{number_current_question} из %{question_count}"
+      next: "Далее"
   admin:
     tests:
       index:
@@ -75,9 +66,34 @@ ru:
         author: "Автор"
         questions_count: "Количество вопросов"
         actions: "Действия"
+        link:
+          add_test: "Добавить новый тест"
       create:
         success: "Тест успешно создан."
-
+      new:
+        header: "Создание нового тест"
+        back: "Назад"
+      edit:
+        header: "Редактирование теста"
+        back: "Назад"
+      show:
+        header: "Тест \"%{title}\""
+        category: "Категория"
+        level: "Уровень сложности"
+        author: "Автор"
+        back: "Назад"
+        questions:
+          header: "Перечень вопросов:"
+          body: "Вопрос"
+          actions: "Действия"
+        link:
+          add_question: "Добавить новый вопрос"
+          edit_test: "Редактировать тест"
+      test:
+        show: "Открыть"
+        edit: "Редактировать"
+        delete: "Удалить"
+        confirm_delete: "Вы уверены?"
   tests_mailer:
     completed_test:
       subject: 'Вы успешно завершили тест на TestGuru!'
