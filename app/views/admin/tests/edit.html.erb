@@ -1,6 +1,6 @@
 <h1><%= t('.header') %></h1>
-<%= link_to t('.back'), admin_tests_path %>
+<%= link_to t('shared.links.back'), admin_tests_path %>
 
 <%= render 'form', test: @test %>
 
-<%= link_to 'Show', [:admin, @test] %>
+<%= link_to t('helpers.shared.links.show'), [:admin, @test] %>

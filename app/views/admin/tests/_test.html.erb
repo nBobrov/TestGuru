@@ -4,10 +4,10 @@
   <td><%= test.level %></td>
   <td><%= test.author.present? ? test.author.name : '-' %></td>
   <td><%= test.questions.count %></td>
-  <td><%= link_to t('.show'), admin_test_path(test) %></td>
-  <td><%= link_to t('.edit'), edit_admin_test_path(test) %></td>
+  <td><%= link_to t('helpers.shared.links.show'), admin_test_path(test) %></td>
+  <td><%= link_to t('helpers.shared.links.edit'), edit_admin_test_path(test) %></td>
   <td>
-    <%= link_to t('.delete'),
+    <%= link_to t('helpers.shared.links.delete'),
                 admin_test_path(test),
                 method: :delete,
                 data: { confirm: t('.confirm_delete') } %>

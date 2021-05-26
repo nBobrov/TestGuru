@@ -65,6 +65,16 @@ en:
       question_header:
         edit: "Create New %{title} Question"
         new: "Edit %{title} Question"
+    links:
+      back: "Back"
+      show: "Show"
+      edit: "Edit"
+      delete: "Delete"
+      add_test: "Add new test"
+      add_answer: "Add new answer"
+      edit_question: "Edit question"
+      add_question: "Add new question"
+      edit_test: "Edit test"
 
   shared:
     errors:
@@ -118,69 +128,40 @@ en:
         author: "Author"
         questions_count: "Questions count"
         actions: "Actions"
-        link:
-          add_test: "Add new test"
       create:
         success: "Test was successfully created."
       new:
         header: "New Test"
-        back: "Back"
       edit:
         header: "Editing Test"
-        back: "Back"
       show:
         header: "Test \"%{title}\""
         category: "Category"
         level: "Level"
         author: "Author"
-        back: "Back"
         questions:
           header: "Questions:"
           body: "Body"
           actions: "Actions"
-        link:
-          add_question: "Add new question"
-          edit_test: "Edit test"
       test:
-        show: "Show"
-        edit: "Edit"
-        delete: "Delete"
         confirm_delete: "Are you sure?"
 
     questions:
       question:
-        show: "Show"
-        edit: "Edit"
-        delete: "Delete"
         confirm_delete: "Are you sure?"
-      new:
-        back: "Back"
-      edit:
-        back: "Back"
       show:
         header: "Question"
-        back: "Back"
         answers: "Answers:"
-        link:
-          add_answer: "Add new answer"
-          edit_question: "Edit question"
 
     answers:
       answer:
-        show: "Show"
-        edit: "Edit"
-        delete: "Delete"
         confirm_delete: "Are you sure?"
       new:
         header: "New Answer"
-        back: "Back"
       edit:
         header: "Editing Answer"
-        back: "Back"
-        show: "Show"
       show:
         header: "Question"
-        back: "Back"
         answer: "Answer:"
         correct: "Correct:"
 

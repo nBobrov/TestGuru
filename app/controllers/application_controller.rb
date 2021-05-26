@@ -19,7 +19,7 @@ class ApplicationController < ActionController::Base
 
   def after_sign_in_path_for(resource)
     set_flash_message! :notice, :signed_in_custom, :first_name => resource.first_name, :last_name => resource.last_name
-    if current_user.is_a?(Admin)
+    if resource.admin?
       stored_location_for(resource) || admin_tests_path
     else
       stored_location_for(resource) || tests_path
@@ -27,7 +27,7 @@ class ApplicationController < ActionController::Base
   end
 
   def default_url_options
-    { lang: I18n.locale}
+    I18n.locale == I18n.default_locale ? super : { lang: I18n.locale }
   end
 
   def set_locale

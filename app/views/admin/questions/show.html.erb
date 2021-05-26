@@ -1,6 +1,6 @@
 <h1><%= t('.header') %></h1>
 
-<%= link_to t('.back'), admin_test_path(@question.test) %>
+<%= link_to t('helpers.shared.links.back'), admin_test_path(@question.test) %>
 
 <p><%= @question.body %></p>
 
@@ -10,5 +10,5 @@
   <%= render @question.answers %>
 </ol>
 
-<%= link_to t('.link.edit_question'), edit_admin_question_path(@question) %> |
-<%= link_to t('.link.add_answer'), new_admin_question_answer_path(@question) %>
+<%= link_to t('helpers.shared.links.edit_question'), edit_admin_question_path(@question) %> |
+<%= link_to t('helpers.shared.links.add_answer'), new_admin_question_answer_path(@question) %>

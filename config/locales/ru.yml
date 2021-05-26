@@ -34,7 +34,17 @@ ru:
       question_header:
         new: "Создание вопроса для теста %{title}"
         edit: "Редактирование вопроса для теста %{title}"
-
+    shared:
+      links:
+        back: "Назад"
+        show: "Открыть"
+        edit: "Редактировать"
+        delete: "Удалить"
+        add_test: "Добавить новый тест"
+        add_answer: "Добавить новый ответ"
+        edit_question: "Редактировать вопрос"
+        add_question: "Добавить новый вопрос"
+        edit_test: "Редактировать тест"
   shared:
     errors:
       header:
@@ -89,69 +99,39 @@ ru:
         author: "Автор"
         questions_count: "Количество вопросов"
         actions: "Действия"
-        link:
-          add_test: "Добавить новый тест"
       create:
         success: "Тест успешно создан."
       new:
         header: "Создание нового тест"
-        back: "Назад"
       edit:
         header: "Редактирование теста"
-        back: "Назад"
       show:
         header: "Тест \"%{title}\""
         category: "Категория"
         level: "Уровень сложности"
         author: "Автор"
-        back: "Назад"
         questions:
           header: "Перечень вопросов:"
           body: "Вопрос"
           actions: "Действия"
-        link:
-          add_question: "Добавить новый вопрос"
-          edit_test: "Редактировать тест"
       test:
-        show: "Открыть"
-        edit: "Редактировать"
-        delete: "Удалить"
         confirm_delete: "Вы уверены?"
 
     questions:
       question:
-        show: "Открыть"
-        edit: "Редактировать"
-        delete: "Удалить"
         confirm_delete: "Вы уверены?"
-      new:
-        back: "Назад"
-      edit:
-        back: "Назад"
       show:
         header: "Вопрос"
-        back: "Назад"
         answers: "Ответы:"
-        link:
-          add_answer: "Добавить новый ответ"
-          edit_question: "Редактировать вопрос"
-
     answers:
       answer:
-        show: "Открыть"
-        edit: "Редактировать"
-        delete: "Удалить"
         confirm_delete: "Вы уверены?"
       new:
         header: "Новый ответ"
-        back: "Назад"
       edit:
         header: "Редактирование ответа"
-        back: "Назад"
-        show: "Открыть"
       show:
         header: "Вопрос"
-        back: "Назад"
         answer: "Ответ:"
         correct: "Верный:"
 
