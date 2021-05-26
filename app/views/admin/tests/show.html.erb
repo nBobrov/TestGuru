@@ -1,0 +1,29 @@
+<h1>Test &laquo;<%= @test.title %>&raquo;</h1>
+
+<%= link_to 'Back', admin_tests_path %>
+
+<table>
+  <tr>
+    <th>Category</th>
+    <th>Level</th>
+    <th>Author</th>
+  </tr>
+  <tr>
+    <td><%= @test.category.title %></td>
+    <td><%= @test.level %></td>
+    <td><%= @test.author.present? ? @test.author.name : '-' %></td>
+  </tr>
+</table>
+
+<h2>Questions:</h2>
+
+<table>
+  <tr>
+    <th>Body</th>
+    <th colspan="4">Actions</th>
+  </tr>
+  <%= render @test.questions %>
+</table>
+
+<%= link_to 'Edit test', edit_admin_test_path(@test) %> |
+<%= link_to 'Add new question', new_admin_test_question_path(@test) %>
