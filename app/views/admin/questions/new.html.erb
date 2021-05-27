@@ -1,5 +1,5 @@
 <h1><%= question_header(@question) %></h1>
 
-<%= link_to 'Back', admin_test_path(@question.test) %>
+<%= link_to t('helpers.shared.links.back'), admin_test_path(@question.test) %>
 
 <%= render 'form' %>

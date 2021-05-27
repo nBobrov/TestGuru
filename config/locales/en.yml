@@ -31,3 +31,140 @@
 
 en:
   hello: "Hello world"
+
+  layouts:
+    application:
+      title: "TestGuru"
+    admin:
+      title: "Admin Panel | TestGuru"
+
+  helpers:
+    submit:
+      test:
+        create: "Create test"
+        update: "Update test"
+    label:
+      test:
+        title: "Title"
+        category_id: "Category"
+        level: "Level"
+      user:
+        first_name: "First name"
+        last_name: " Last name"
+        email: "Email"
+        password: "Password"
+        password_confirmation: "Password confirmation"
+      answer:
+        body: "Body"
+        correct: "Correct"
+      category:
+        title: "Title"
+      question:
+        body: "Body"
+    questions_helper:
+      question_header:
+        edit: "Create New %{title} Question"
+        new: "Edit %{title} Question"
+    links:
+      back: "Back"
+      show: "Show"
+      edit: "Edit"
+      delete: "Delete"
+      add_test: "Add new test"
+      add_answer: "Add new answer"
+      edit_question: "Edit question"
+      add_question: "Add new question"
+      edit_test: "Edit test"
+
+  shared:
+    errors:
+      header:
+        one: "%{count} error  detected:"
+        other: "%{count} errors detected:"
+    header:
+      sign_in: "Sign in"
+      sign_up: "Sign up"
+      logout: "Exit"
+      welcome: "Welcome"
+    footer:
+      app_description: "приложение для создания и выполнения онлайн тестов"
+      project:  "Учебный проект в онлайн-школе Thinknetica"
+
+  tests:
+    index:
+      header: "Tricky tests"
+      title: "Title"
+      category: "Category"
+      level: "Level"
+      author: "Author"
+      questions_count: "Questions count"
+      actions: "Actions"
+    test:
+      start: "Start"
+
+  test_passages:
+    result:
+      header: "The %{title} Test was Completed!"
+      back: "Back to the list of tests"
+      successful_result: "The %{title} Test passed successfully."
+      unsuccessful_result: "The %{title} Test failed."
+      result_notice: "To pass the test successfully, you must answer %{successful_result}% of the questions correctly."
+      result_info: "%{user_email}, your result: "
+    show:
+      header: "Pass the %{title} Test"
+      questions_info: "Questions %{number_current_question} of %{question_count}"
+      next: "Next"
+  admin:
+    nav:
+      panel_name: "TestGuru Admin Panel"
+      welcome: "Welcome"
+      logout: "Logout"
+    tests:
+      index:
+        header: "Tricky tests"
+        title: "Title"
+        category: "Category"
+        level: "Level"
+        author: "Author"
+        questions_count: "Questions count"
+        actions: "Actions"
+      create:
+        success: "Test was successfully created."
+      new:
+        header: "New Test"
+      edit:
+        header: "Editing Test"
+      show:
+        header: "Test \"%{title}\""
+        category: "Category"
+        level: "Level"
+        author: "Author"
+        questions:
+          header: "Questions:"
+          body: "Body"
+          actions: "Actions"
+      test:
+        confirm_delete: "Are you sure?"
+
+    questions:
+      question:
+        confirm_delete: "Are you sure?"
+      show:
+        header: "Question"
+        answers: "Answers:"
+
+    answers:
+      answer:
+        confirm_delete: "Are you sure?"
+      new:
+        header: "New Answer"
+      edit:
+        header: "Editing Answer"
+      show:
+        header: "Question"
+        answer: "Answer:"
+        correct: "Correct:"
+
+  tests_mailer:
+    completed_test:
+      subject: 'You just completed the TestGuru test!'

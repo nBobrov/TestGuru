@@ -1,11 +1,11 @@
-<h1>Editing Answer</h1>
+<h1><%= t('.header') %></h1>
 
-<%= link_to 'Back', admin_question_path(@answer.question) %>
+<%= link_to t('helpers.shared.links.back'), admin_question_path(@answer.question) %>
 
 <p>
-  <%= @answer.question.body %>>
+  <%= @answer.question.body %>
 </p>
 
 <%= render 'form', answer: @answer %>
 
-<%= link_to 'Show', [:admin, @answer] %>
+<%= link_to t('helpers.shared.links.show'), [:admin, @answer] %>
