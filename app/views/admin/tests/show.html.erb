@@ -1,29 +1,30 @@
-<h1><%= t('.header', title: @test.title ) %></h1>
+<div class="row justify-content-center m-3">
+  <h1><%= t('.header', title: @test.title ) %></h1>
 
-<%= link_to t('helpers.shared.links.back'), admin_tests_path %>
+  <table class="table table-striped">
+    <tr>
+      <th><%= t('.category') %></th>
+      <th><%= t('.level') %></th>
+      <th><%= t('.author') %></th>
+    </tr>
+    <tr>
+      <td><%= @test.category.title %></td>
+      <td><%= @test.level %></td>
+      <td><%= @test.author.present? ? @test.author.name : '-' %></td>
+    </tr>
+  </table>
 
-<table>
-  <tr>
-    <th><%= t('.category') %></th>
-    <th><%= t('.level') %></th>
-    <th><%= t('.author') %></th>
-  </tr>
-  <tr>
-    <td><%= @test.category.title %></td>
-    <td><%= @test.level %></td>
-    <td><%= @test.author.present? ? @test.author.name : '-' %></td>
-  </tr>
-</table>
+  <h2><%= t('.questions.header') %></h2>
 
-<h2><%= t('.questions.header') %></h2>
+  <table class="table table-striped">
+    <tr>
+      <th><%= t('.questions.body') %></th>
+      <th colspan="4"><%= t('.questions.actions') %></th>
+    </tr>
+    <%= render @test.questions %>
+  </table>
 
-<table>
-  <tr>
-    <th><%= t('.questions.body') %></th>
-    <th colspan="4"><%= t('.questions.actions') %></th>
-  </tr>
-  <%= render @test.questions %>
-</table>
-
-<%= link_to t('helpers.shared.links.edit_test'), edit_admin_test_path(@test) %> |
-<%= link_to t('helpers.shared.links.add_question'), new_admin_test_question_path(@test) %>
+  <%= link_to t('helpers.shared.links.back'), admin_tests_path %> |
+  <%= link_to t('helpers.shared.links.edit_test'), edit_admin_test_path(@test) %> |
+  <%= link_to t('helpers.shared.links.add_question'), new_admin_test_question_path(@test) %>
+</div>

@@ -1,6 +1,9 @@
-<h1><%= t('.header') %></h1>
-<%= link_to t('shared.links.back'), admin_tests_path %>
+<div class="row justify-content-center mt-3">
+  <div class="col col-md-6">
+    <h1><%= t('.header') %></h1>
 
-<%= render 'form', test: @test %>
+    <%= render 'form', test: @test %>
 
-<%= link_to t('helpers.shared.links.show'), [:admin, @test] %>
+    <%= link_to t('shared.links.back'), admin_tests_path %> <%= link_to t('helpers.shared.links.show'), [:admin, @test] %>
+  </div>
+</div>
