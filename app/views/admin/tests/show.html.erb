@@ -23,8 +23,15 @@
     </tr>
     <%= render @test.questions %>
   </table>
+</div>
 
-  <%= link_to t('helpers.shared.links.back'), admin_tests_path %> |
-  <%= link_to t('helpers.shared.links.edit_test'), edit_admin_test_path(@test) %> |
-  <%= link_to t('helpers.shared.links.add_question'), new_admin_test_question_path(@test) %>
+<div class="row m-3">
+  <div class="col-sm-6"></div>
+  <div class="col-sm-6">
+    <div class="btn-group float-end" role="group">
+      <%= link_to t('helpers.shared.links.back'), admin_tests_path, class: 'btn btn-outline-primary' %>
+      <%= link_to t('helpers.shared.links.edit_test'), edit_admin_test_path(@test), class: 'btn btn-outline-primary' %>
+      <%= link_to t('helpers.shared.links.add_question'), new_admin_test_question_path(@test), class: 'btn btn-outline-primary' %>
+    </div>
+  </div>
 </div>

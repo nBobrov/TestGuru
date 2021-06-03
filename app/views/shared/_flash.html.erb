@@ -1,3 +1,5 @@
-<% flash.each do |type, message| %>
-  <%= tag.p message, class: "flash #{type}" %>
-<% end %>
+<div class="row justify-content-center">
+  <% flash.each do |type, message| %>
+    <%= flash_message(type) %>
+  <% end %>
+</div>

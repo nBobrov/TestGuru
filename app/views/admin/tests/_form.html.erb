@@ -1,35 +1,33 @@
-<div class="card border-primary">
-  <div class="card-body">
-    <%= form_with model: [:admin, @test], local: true do |form| %>
-      <div сlass="form-group">
-        <%= render 'shared/errors', resource: @test %>
+<div class="card-body">
+  <%= form_with model: [:admin, @test], local: true do |form| %>
+    <div сlass="form-group">
+      <%= render 'shared/errors', resource: @test %>
 
-        <p>
-          <%= form.label :title %>
-          <%= form.text_field :title,
-                              autofocus: true,
-                              class: 'form-control'
-          %>
-        </p>
+      <p>
+        <%= form.label :title %>
+        <%= form.text_field :title,
+                            autofocus: true,
+                            class: 'form-control'
+        %>
+      </p>
 
-        <p>
-          <%= form.label :level %>
-          <%= form.text_field :level, class: 'form-control' %>
-        </p>
+      <p>
+        <%= form.label :level %>
+        <%= form.text_field :level, class: 'form-control' %>
+      </p>
 
-        <p>
-          <%= form.label :category_id %>
-          <%= form.collection_select :category_id,
-                                     Category.all,
-                                     :id,
-                                     :title,
-                                     {prompt: true},
-                                     {class: 'form-control'}
-          %>
-        </p>
+      <p>
+        <%= form.label :category_id %>
+        <%= form.collection_select :category_id,
+                                   Category.all,
+                                   :id,
+                                   :title,
+                                   {prompt: true},
+                                   {class: 'form-control'}
+        %>
+      </p>
 
-        <p><%= form.submit nil, class: 'btn btn-primary'  %></p>
-      </div>
-    <% end %>
-  </div>
+      <p><%= form.submit nil, class: 'btn btn-primary'  %></p>
+    </div>
+  <% end %>
 </div>

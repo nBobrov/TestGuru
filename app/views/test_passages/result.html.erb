@@ -3,10 +3,10 @@
   <%
     if @test_passage.passed?
       result_text = t('.successful_result', title: @test_passage.test.title)
-      result_class = 'success'
+      result_class = 'link-success'
     else
       result_text = t('.unsuccessful_result', title: @test_passage.test.title)
-      result_class = 'fail'
+      result_class = 'link-danger'
     end
   %>
 
