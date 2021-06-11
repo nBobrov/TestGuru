@@ -50,7 +50,7 @@ en:
         level: "Level"
       user:
         first_name: "First name"
-        last_name: " Last name"
+        last_name: "Last name"
         email: "Email"
         password: "Password"
         password_confirmation: "Password confirmation"
@@ -115,6 +115,10 @@ en:
       header: "Pass the %{title} Test"
       questions_info: "Questions %{number_current_question} of %{question_count}"
       next: "Next"
+    gist:
+      success: 'Gist was successfully created!'
+      failure: 'An error occurred while saving gist'
+      open: 'Open gist.'
   admin:
     nav:
       panel_name: "TestGuru - Admin Panel"
@@ -146,6 +150,12 @@ en:
           actions: "Actions"
       test:
         confirm_delete: "Are you sure?"
+    gists:
+      index:
+        header: "List of gists"
+        body: "Questions"
+        url: "Gist URL"
+        user_email: "User email"
 
     questions:
       question:
@@ -168,4 +178,8 @@ en:
 
   tests_mailer:
     completed_test:
-      subject: 'You just completed the TestGuru test!'
+      subject: "You just completed the TestGuru test!"
+
+  services:
+    gist_question_service:
+      description: "A question about %{test} from TestGuru"

@@ -86,6 +86,10 @@ ru:
       header: "Прохождение теста \"%{title}\""
       questions_info: "Вопрос %{number_current_question} из %{question_count}"
       next: "Далее"
+    gist:
+      success: 'Gist успешно сохранен.'
+      failure: 'Во время сохранения gist произошла ошибка.'
+      open: 'Открыть gist.'
   admin:
     nav:
       panel_name: "TestGuru - Панель администратора"
@@ -117,6 +121,12 @@ ru:
           actions: "Действия"
       test:
         confirm_delete: "Вы уверены?"
+    gists:
+      index:
+        header: "Список gists"
+        body: "Вопрос"
+        url: "Gist URL"
+        user_email: "Email пользователя"
 
     questions:
       question:
@@ -139,3 +149,7 @@ ru:
   tests_mailer:
     completed_test:
       subject: 'Вы успешно завершили тест на TestGuru!'
+
+  services:
+    gist_question_service:
+      description: "Вопрос по тесту %{test} из TestGuru"
