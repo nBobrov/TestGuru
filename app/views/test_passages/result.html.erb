@@ -1,16 +1,18 @@
-<h1><%= t('.header', title: @test_passage.test.title) %></h1>
-<%
-  if @test_passage.passed?
-    result_text = t('.successful_result', title: @test_passage.test.title)
-    result_class = 'success'
-  else
-    result_text = t('.unsuccessful_result', title: @test_passage.test.title)
-    result_class = 'fail'
-  end
-%>
+<div class="row justify-content-center m-3">
+  <h1><%= t('.header', title: @test_passage.test.title) %></h1>
+  <%
+    if @test_passage.passed?
+      result_text = t('.successful_result', title: @test_passage.test.title)
+      result_class = 'link-success'
+    else
+      result_text = t('.unsuccessful_result', title: @test_passage.test.title)
+      result_class = 'link-danger'
+    end
+  %>
 
-<p><%= t('.result_notice', successful_result: TestPassage::SUCCESSFUL_PERCENT) %><p>
-<p><%= t('.result_info', user_email: @test_passage.user.email) %><%= tag.span "#{@test_passage.result.floor(2)}%", class: result_class %></p>
-<p><%= result_text %></p>
+  <p><%= t('.result_notice', successful_result: TestPassage::SUCCESSFUL_PERCENT) %><p>
+  <p><%= t('.result_info', user_email: @test_passage.user.email) %><%= tag.span "#{@test_passage.result.floor(2)}%", class: result_class %></p>
+  <p><%= result_text %></p>
 
-<%= link_to t('.back'), tests_path(@test_passage.test) %>
+  <%= link_to t('.back'), tests_path(@test_passage.test) %>
+</div>

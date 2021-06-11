@@ -52,11 +52,12 @@ ru:
         many: "Обнаружено %{count} ошибок:"
         one: "Обнаружено %{count} ошибка:"
         other: "Обнаружено %{count} ошибки:"
-    header:
+    nav:
       sign_in: "Войти"
       sign_up: "Зарегистрироваться"
       logout: "Выйти"
       welcome: "Добро пожаловать"
+      menu_admin: "Панель администратора"
     footer:
       app_description: "приложение для создания и выполнения онлайн тестов"
       project:  "Учебный проект в онлайн-школе Thinknetica"
@@ -87,7 +88,7 @@ ru:
       next: "Далее"
   admin:
     nav:
-      panel_name: "TestGuru Панель администратора"
+      panel_name: "TestGuru - Панель администратора"
       welcome: "Добро пожаловать"
       logout: "Выйти"
     tests:

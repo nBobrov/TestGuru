@@ -4,5 +4,5 @@
   <td><%= test.level %></td>
   <td><%= test.author.present? ? test.author.name : '-' %></td>
   <td><%= test.questions.count %></td>
-  <td><%= test.questions.count > 0 ? (button_to t('.start'), start_test_path(test)) : '' %></td>
+  <td><%= test.questions.count > 0 ? (button_to t('.start'), start_test_path(test), class: 'btn btn-primary') : '' %></td>
 </tr>

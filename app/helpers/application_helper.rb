@@ -1,4 +1,6 @@
 module ApplicationHelper
+  FLASH_CLASS = { 'notice' => 'primary', 'alert' => 'danger' }.freeze
+
   def current_year
     Date.current.year
   end
@@ -8,6 +10,6 @@ module ApplicationHelper
   end
 
   def flash_message(type)
-    tag.p flash[type], class: "flash #{type}" if flash[type]
+    tag.div flash[type], class: "alert alert-#{FLASH_CLASS[type]}", role: 'alert' if flash[type]
   end
 end

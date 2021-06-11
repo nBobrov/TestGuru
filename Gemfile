@@ -26,8 +26,10 @@ gem 'rails-i18n', '~> 6.0.0'
 gem 'rubocop', '~> 1.13', require: false
 
 #AUTH
-#
 gem 'devise', '~> 4.8'
+
+gem 'bootstrap', '~> 5.0.1'
+gem 'jquery-rails'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'

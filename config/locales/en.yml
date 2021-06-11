@@ -81,11 +81,12 @@ en:
       header:
         one: "%{count} error  detected:"
         other: "%{count} errors detected:"
-    header:
+    nav:
       sign_in: "Sign in"
       sign_up: "Sign up"
       logout: "Exit"
       welcome: "Welcome"
+      menu_admin: "Admin Panel"
     footer:
       app_description: "приложение для создания и выполнения онлайн тестов"
       project:  "Учебный проект в онлайн-школе Thinknetica"
@@ -116,7 +117,7 @@ en:
       next: "Next"
   admin:
     nav:
-      panel_name: "TestGuru Admin Panel"
+      panel_name: "TestGuru - Admin Panel"
       welcome: "Welcome"
       logout: "Logout"
     tests:

@@ -1,6 +1,14 @@
-<h1><%= t('.header') %></h1>
-<%= link_to t('shared.links.back'), admin_tests_path %>
+<div class="row justify-content-center mt-3">
+  <div class="col col-md-6">
+    <div class="card border-primary">
+      <div class="card-header"><%= t('.header') %></div>
 
-<%= render 'form', test: @test %>
+      <%= render 'form', test: @test %>
 
-<%= link_to t('helpers.shared.links.show'), [:admin, @test] %>
+      <div class="card-footer text-muted">
+        <%= link_to t('shared.links.back'), admin_tests_path %> <%= link_to t('helpers.shared.links.show'), [:admin, @test] %>
+      </div>
+
+    </div>
+  </div>
+</div>
