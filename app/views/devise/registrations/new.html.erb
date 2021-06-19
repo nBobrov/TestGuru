@@ -1,39 +1,86 @@
-<h2><%= t('.title') %></h2>
+<div class="row justify-content-center mt-3">
+  <div class="col col-md-4">
+    <h2><%= t('.title') %></h2>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
+    <div class="card border-primary">
+      <div class="card-body">
+        <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+          <div сlass="form-group">
+            <div>
+              <%= render "devise/shared/error_messages", resource: resource %>
+            </div>
 
-  <div class="field">
-    <%= f.label :first_name %><br />
-    <%= f.text_field :first_name, autofocus: true %>
+            <p>
+              <%= f.label :first_name %>
+              <%= f.text_field :first_name,
+                                autofocus: true,
+                                autocomplete: 'first_name',
+                                class: 'form-control',
+                                placeholder: t('.enter_first_name')
+              %>
+            </p>
+
+
+            <p>
+              <%= f.label :last_name %>
+              <%= f.text_field :last_name,
+                                autofocus: false,
+                                autocomplete: 'last_name',
+                                class: 'form-control',
+                                placeholder: t('.enter_last_name')
+              %>
+            </p>
+
+            <p>
+              <%= f.label :email %>
+              <%= f.email_field :email,
+                                autofocus: false,
+                                autocomplete: 'email',
+                                class: 'form-control',
+                                placeholder: t('.enter_email'),
+                                required: true
+              %>
+            </p>
+
+            <p>
+              <%= f.label :password %>
+              <% if @minimum_password_length %>
+                <span id="passwordHelpInline" class="form-text">
+                  <%= t('shared.minimum_password_length', count: @minimum_password_length) %>
+                </span>
+              <% end %>
+              <div class="input-group has-validation">
+                <%= f.password_field :password,
+                                     autocomplete: "new-password",
+                                     class: 'form-control',
+                                     placeholder: t('.enter_password'),
+                                     required: true
+                %>
+                <div class="invalid-feedback">
+                  Please choose a username.
+                </div>
+              </div>
+            </p>
+
+
+            <p>
+              <%= f.label :password_confirmation %>
+              <%= f.password_field :password_confirmation,
+                                   autocomplete: "new-password",
+                                   class: 'form-control',
+                                   placeholder: t('.confirmation_password'),
+                                   required: true
+              %>
+            </p>
+
+            <%= f.submit t('shared.links.sign_up'), class: 'btn btn-primary', id: 'create_user' %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+
+    <div class="mt-1">
+      <%= render "devise/shared/links" %>
+    </div>
   </div>
-
-  <div class="field">
-    <%= f.label :last_name %><br />
-    <%= f.text_field :last_name %>
-  </div>
-
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autocomplete: "email" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em><%= t('shared.minimum_password_length', count: @minimum_password_length) %></em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit t('shared.links.sign_up') %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+</div>
