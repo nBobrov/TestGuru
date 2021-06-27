@@ -22,11 +22,12 @@ class TestPassagesController < ApplicationController
   end
   
   def gist
-    result = GistQuestionService.new(@test_passage.current_question).call
+    client = GistQuestionService.new(@test_passage.current_question)
+    gist_url = client.call
 
-    if result.status == 201
-      flash[:notice] = "#{t('.success')} #{helpers.link_to t('.open'), result.data[:html_url], target: '_blank'}".html_safe
-      @test_passage.user.gists.create!(question_id: @test_passage.current_question.id, url: result.data[:html_url])
+    if client.success?
+      flash[:notice] = "#{t('.success')} #{helpers.link_to t('.open'), gist_url, target: '_blank'}".html_safe
+      @test_passage.user.gists.create!(question_id: @test_passage.current_question.id, url: gist_url)
     else
       flash[:alert] = t('.failure')
     end
