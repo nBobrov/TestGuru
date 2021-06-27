@@ -57,7 +57,7 @@
                                      required: true
                 %>
                 <div class="invalid-feedback">
-                  Please choose a username.
+                  <%= t('activerecord.errors.messages.confirmation', attribute: t('activerecord.attributes.user.password_confirmation')) %>
                 </div>
               </div>
             </p>
