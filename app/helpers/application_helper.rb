@@ -10,6 +10,6 @@ module ApplicationHelper
   end
 
   def flash_message(type)
-    tag.div flash[type], class: "alert alert-#{FLASH_CLASS[type]}", role: 'alert' if flash[type]
+    tag.div raw(flash[type]), class: "alert alert-#{FLASH_CLASS[type]}", role: 'alert' if flash[type]
   end
 end
