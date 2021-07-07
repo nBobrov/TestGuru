@@ -1,12 +1,21 @@
 <tr>
-  <td><%= test.title %></td>
-  <td><%= test.category.title %></td>
-  <td><%= test.level %></td>
-  <td><%= test.author.present? ? test.author.name : '-' %></td>
-  <td><%= test.questions.count %></td>
-  <td><%= link_to t('helpers.shared.links.show'), admin_test_path(test), class: 'btn btn-primary' %></td>
-  <td><%= link_to t('helpers.shared.links.edit'), edit_admin_test_path(test), class: 'btn btn-primary' %></td>
-  <td>
+  <td class="align-middle">
+    <%= content_tag :span, test.title, class: 'test-title', data: { test_id: test.id } %>
+    <%= render 'form_inline', test: test == @test ? @test : test %>
+  </td>
+  <td class="align-middle"><%= test.category.title %></td>
+  <td class="align-middle"><%= test.level %></td>
+  <td class="align-middle"><%= test.author.present? ? test.author.name : '-' %></td>
+  <td class="align-middle"><%= test.questions.count %></td>
+  <td class="align-middle"><%= link_to t('helpers.shared.links.show'), admin_test_path(test), class: 'btn btn-primary' %></td>
+  <td class="align-middle">
+    <%= link_to t('helpers.shared.links.edit'),
+                edit_admin_test_path(test),
+                data: {test_id: test.id},
+                class: 'btn btn-primary form-inline-link'
+    %>
+  </td>
+  <td class="align-middle">
     <%= link_to t('helpers.shared.links.delete'),
                 admin_test_path(test),
                 method: :delete,

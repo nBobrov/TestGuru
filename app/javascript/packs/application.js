@@ -11,6 +11,7 @@ import "bootstrap"
 
 require("utilities/sorting")
 require("utilities/check_password")
+require("utilities/form_inline")
 
 Rails.start()
 Turbolinks.start()
