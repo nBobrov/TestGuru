@@ -75,6 +75,7 @@ en:
       edit_question: "Edit question"
       add_question: "Add new question"
       edit_test: "Edit test"
+      cancel: "Cancel"
 
   shared:
     errors:

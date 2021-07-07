@@ -33,6 +33,18 @@
       </div>
 
       <div class="card-footer text-muted">
+        <div class="progress">
+          <%= content_tag :div,
+                          0,
+                          class: 'progress-bar',
+                          role:   'progressbar',
+                          'aria-valuenow': '0',
+                          'aria-valuemax': '100',
+                          style: "width: 0%",
+                          data: { number_current_question: @test_passage.number_current_question, question_count: @test_passage.test.questions.count }
+          %>
+        </div>
+
         <%= t('.questions_info',  number_current_question: @test_passage.number_current_question, question_count: @test_passage.test.questions.count) %>
       </div>
 

@@ -14,6 +14,12 @@
                 data: {test_id: test.id},
                 class: 'btn btn-primary form-inline-link'
     %>
+    <%= link_to t('helpers.shared.links.cancel'),
+                'edit_admin_test_path(test)',
+                data: {test_id: test.id},
+                class: 'btn btn-primary form-inline-link',
+                style: 'display: none'
+    %>
   </td>
   <td class="align-middle">
     <%= link_to t('helpers.shared.links.delete'),
