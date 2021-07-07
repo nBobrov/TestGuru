@@ -8,7 +8,11 @@ class GistQuestionService
 
   def call
     @client.create_gist(gist_params)
-    response = @client.last_response
+    @client.last_response.data[:html_url]
+  end
+
+  def success?
+    @client.last_response.status == 201
   end
 
   private

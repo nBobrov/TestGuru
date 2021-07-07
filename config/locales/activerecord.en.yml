@@ -30,3 +30,4 @@ en:
     errors:
       messages:
         blank: "can't be blank"
+        confirmation: "%{attribute} and Password must match."

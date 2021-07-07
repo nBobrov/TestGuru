@@ -30,3 +30,4 @@ ru:
     errors:
       messages:
         blank: "не может быть пустым"
+        confirmation: "%{attribute} и пароль должны совпадать."
