@@ -45,6 +45,7 @@ ru:
         edit_question: "Редактировать вопрос"
         add_question: "Добавить новый вопрос"
         edit_test: "Редактировать тест"
+        cancel: "Отменить"
   shared:
     errors:
       header:

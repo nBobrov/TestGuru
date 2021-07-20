@@ -1,6 +1,8 @@
 <div class="row justify-content-center m-3">
   <h1><%= t('.header') %></h1>
 
+  <%= render 'shared/errors', resource: @test %>
+
   <table class="table table-striped">
     <tr>
       <th class="sort-by-title pointer">
