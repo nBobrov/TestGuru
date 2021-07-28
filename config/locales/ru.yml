@@ -62,7 +62,6 @@ ru:
     footer:
       app_description: "приложение для создания и выполнения онлайн тестов"
       project:  "Учебный проект в онлайн-школе Thinknetica"
-      feedback: "Обратная связь"
 
   tests:
     index:
@@ -75,17 +74,6 @@ ru:
       actions: "Действия"
     test:
       start: "Начать"
-
-  feedback:
-    index:
-      header: "Обратная связь"
-    form:
-      title: "Заголовок"
-      text: "Текст сообщения"
-      send: "Отправить"
-      from: "От кого"
-    create:
-      success: "Отзыв отправлен успешно"
 
   test_passages:
     result:

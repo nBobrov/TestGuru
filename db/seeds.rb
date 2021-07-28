@@ -8,7 +8,6 @@
 
 TestPassage.delete_all
 Answer.delete_all
-Gist.delete_all
 Question.delete_all
 Test.delete_all
 Category.delete_all
