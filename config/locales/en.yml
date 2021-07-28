@@ -91,6 +91,7 @@ en:
     footer:
       app_description: "приложение для создания и выполнения онлайн тестов"
       project:  "Учебный проект в онлайн-школе Thinknetica"
+      feedback: "Feedback"
 
   tests:
     index:
@@ -103,6 +104,17 @@ en:
       actions: "Actions"
     test:
       start: "Start"
+
+  feedback:
+    index:
+      header: "Feedback"
+    form:
+      title: "Title"
+      text: "Text"
+      send: "Send"
+      from: "From"
+    create:
+      success: "Feedback sent successfully"
 
   test_passages:
     result:
