@@ -1,0 +1,5 @@
+<tr>
+  <td><%= badge.name %></td>
+  <td><%= image_tag(badge.img, height: '20px') %></td>
+  <td><%= badge.user_ids.count > 0 ? '+' : '-' %></td>
+</tr>

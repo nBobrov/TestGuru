@@ -13,6 +13,7 @@ ru:
         category: "Категория"
         level: "Уровень сложности"
         author: "Автор"
+        passing_time: "Время на прохождение теста"
       user:
         first_name: "Имя"
         last_name: "Фамилия"
@@ -27,6 +28,11 @@ ru:
         title: "Название"
       question:
         body: "Текст вопроса"
+      badge:
+        name: "Название"
+        img: "Изрображение"
+        rule_type: "Порядок выдачи бейджа"
+        rule_value: "Условие выдачи бейджа"
     errors:
       messages:
         blank: "не может быть пустым"

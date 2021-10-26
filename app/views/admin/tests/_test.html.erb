@@ -7,6 +7,7 @@
   <td class="align-middle"><%= test.level %></td>
   <td class="align-middle"><%= test.author.present? ? test.author.name : '-' %></td>
   <td class="align-middle"><%= test.questions.count %></td>
+  <td class="align-middle"><%= test.passing_time ? test.passing_time : '-' %></td>
   <td class="align-middle"><%= link_to t('helpers.shared.links.show'), admin_test_path(test), class: 'btn btn-primary' %></td>
   <td class="align-middle">
     <%= link_to t('helpers.shared.links.edit'),

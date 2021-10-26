@@ -1,0 +1,27 @@
+<div class="card-body">
+  <%= form_with model: [:admin, @badge], local: true do |form| %>
+    <div сlass="form-group">
+      <%= render 'shared/errors', resource: @badge %>
+
+      <p>
+        <%= form.label :name %>
+        <%= form.text_field :name, autofocus: true, class: 'form-control'
+        %>
+      </p>
+      <p>
+        <%= form.label :img %>
+        <%= form.text_field :img, class: 'form-control'%>
+      </p>
+      <p>
+        <%= form.label :rule_type %>
+        <%= form.select :rule_type, badges_types, {prompt: true}, class: 'form-control' %>
+      </p>
+      <p>
+        <%= form.label :rule_value %>
+        <%= form.text_field :rule_value, class: 'form-control' %>
+      </p>
+
+      <p><%= form.submit nil, class: 'btn btn-primary'  %></p>
+    </div>
+  <% end %>
+</div>

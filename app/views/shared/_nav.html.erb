@@ -7,7 +7,10 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <%= link_to t('.menu_admin'), admin_tests_path, class: 'nav-link active' if current_user&.admin? %>
+          <%= link_to t('.menu_admin'), admin_tests_path, class: 'nav-link' if current_user&.admin? %>
+        </li>
+        <li class="nav-item">
+          <%= link_to t('.menu_badges'), badges_path, class: "nav-link #{'active' if controller_name == 'badges'}" %>
         </li>
       </ul>
     </div>

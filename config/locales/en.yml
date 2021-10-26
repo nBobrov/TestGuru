@@ -76,6 +76,8 @@ en:
       add_question: "Add new question"
       edit_test: "Edit test"
       cancel: "Cancel"
+      add_badge: "Add new badge"
+      dit_badge: "Edit badge"
 
   shared:
     errors:
@@ -88,6 +90,7 @@ en:
       logout: "Exit"
       welcome: "Welcome"
       menu_admin: "Admin Panel"
+      menu_badges: "Badges"
     footer:
       app_description: "приложение для создания и выполнения онлайн тестов"
       project:  "Учебный проект в онлайн-школе Thinknetica"
@@ -102,8 +105,16 @@ en:
       author: "Author"
       questions_count: "Questions count"
       actions: "Actions"
+      passing_time: "Passing time (minutes)"
     test:
       start: "Start"
+
+  badges:
+    index:
+      header: "Badges earned"
+      name: "Name"
+      img: "Image"
+      presence: "Presence"
 
   feedback:
     index:
@@ -136,6 +147,9 @@ en:
     nav:
       panel_name: "TestGuru - Admin Panel"
       welcome: "Welcome"
+      tests: "Tests"
+      gists: "Gists"
+      badges: "Badges"
       logout: "Logout"
     tests:
       index:
@@ -146,6 +160,7 @@ en:
         author: "Author"
         questions_count: "Questions count"
         actions: "Actions"
+        passing_time: "Passing time (minutes)"
       create:
         success: "Test was successfully created."
       new:
@@ -169,7 +184,26 @@ en:
         body: "Questions"
         url: "Gist URL"
         user_email: "User email"
-
+    badges:
+      index:
+        header: "List of badges"
+        name: "Name"
+        img: "Image"
+        rule_type: "Rule type"
+        rule_value: "Rule value"
+        actions: "Actions"
+      create:
+        success: "Badge was successfully created."
+      new:
+        header: "New badge"
+      edit:
+        header: "Editing badge"
+      badge:
+        confirm_delete: "Are you sure?"
+      types:
+        success_passing_all_tests_from_category: "Successful passing of all tests in the category"
+        success_passing_test_from_the_first_try: "Passing the test successfully on the first try"
+        success_passing_all_tests_of_specified_level: "Successful passing of all tests of a specified level"
     questions:
       question:
         confirm_delete: "Are you sure?"

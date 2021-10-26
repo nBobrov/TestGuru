@@ -13,6 +13,7 @@ en:
         category: "Category"
         level: "Level"
         author: "Author"
+        passing_time: "Passing time"
       users:
         first_name: "First name"
         last_name: "Last name"
@@ -27,6 +28,11 @@ en:
         title: "Title"
       question:
         body: "Body"
+      badge:
+        name: "Name"
+        img: "Image"
+        rule_type: "Rule type"
+        rule_value: "Rule value"
     errors:
       messages:
         blank: "can't be blank"

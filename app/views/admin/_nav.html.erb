@@ -16,6 +16,9 @@
         <li class="nav-item">
           <%= link_to t('.gists'), admin_gists_path, class: "nav-link #{'active' if controller_name == 'gists'}" %>
         </li>
+        <li class="nav-item">
+          <%= link_to t('.badges'), admin_badges_path, class: "nav-link #{'active' if controller_name == 'badges'}" %>
+        </li>
       </ul>
     </div>
 
