@@ -5,11 +5,17 @@ class TestPassage < ApplicationRecord
   belongs_to :test
   belongs_to :current_question, class_name: 'Question', optional: true
   before_validation :before_validation_set_first_question, on: :create
+  before_validation :before_validation_set_end_time, on: :create
   before_update :before_update_next_question
+
+  scope :passed, -> { where(level: 2..4) }
 
   def accept!(answer_ids)
     if correct_answer?(answer_ids)
       self.correct_questions += 1
+    end
+    if passed?
+      self.passed = true
     end
 
     save!
@@ -47,5 +53,9 @@ class TestPassage < ApplicationRecord
 
   def before_update_next_question
     self.current_question = test.questions.order(:id).where('id > ?', current_question.id).first
+  end
+
+  def before_validation_set_end_time
+    self.end_time = (Time.now + test.passing_time.minutes).to_f * 1000   if test.passing_time > 0
   end
 end

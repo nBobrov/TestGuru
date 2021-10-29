@@ -46,6 +46,8 @@ ru:
         add_question: "Добавить новый вопрос"
         edit_test: "Редактировать тест"
         cancel: "Отменить"
+        add_badge: "Добавить новый бэйдж"
+        dit_badge: "Редактировать бэйдж"
   shared:
     errors:
       header:
@@ -59,6 +61,7 @@ ru:
       logout: "Выйти"
       welcome: "Добро пожаловать"
       menu_admin: "Панель администратора"
+      menu_badges: "Бэйджи"
     footer:
       app_description: "приложение для создания и выполнения онлайн тестов"
       project:  "Учебный проект в онлайн-школе Thinknetica"
@@ -73,8 +76,16 @@ ru:
       author: "Автор"
       questions_count: "Количество вопросов"
       actions: "Действия"
+      passing_time: "Время на прохождение теста (минуты)"
     test:
       start: "Начать"
+
+  badges:
+    index:
+      header: "Полученные бэйджи"
+      name: "Название"
+      img: "Изображение"
+      presence: "Наличие"
 
   feedback:
     index:
@@ -107,6 +118,9 @@ ru:
     nav:
       panel_name: "TestGuru - Панель администратора"
       welcome: "Добро пожаловать"
+      tests: "Тесты"
+      gists: "Gists"
+      badges: "Бэйджи"
       logout: "Выйти"
     tests:
       index:
@@ -116,6 +130,7 @@ ru:
         level: "Уровень"
         author: "Автор"
         questions_count: "Количество вопросов"
+        passing_time: "Время на прохождение теста (минуты)"
         actions: "Действия"
       create:
         success: "Тест успешно создан."
@@ -140,7 +155,26 @@ ru:
         body: "Вопрос"
         url: "Gist URL"
         user_email: "Email пользователя"
-
+    badges:
+      index:
+        header: "Список бэйджев"
+        name: "Название"
+        img: "Изображение"
+        rule_type: "Порядок выдачи бейджа"
+        rule_value: "Условие выдачи бейджа"
+        actions: "Действия"
+      new:
+        header: "Создание нового бэйджа"
+      edit:
+        header: "Редактирование бэйджа"
+      create:
+        success: "Бэйдж успешно создан."
+      badge:
+        confirm_delete: "Вы уверены?"
+      types:
+        success_passing_all_tests_from_category: "Успешное прохождение всех тестов из категории"
+        success_passing_test_from_the_first_try: "Успешное прохождение теста с первой попытки"
+        success_passing_all_tests_of_specified_level: "Успешное прохождение всех тестов заданного уровня"
     questions:
       question:
         confirm_delete: "Вы уверены?"
