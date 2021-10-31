@@ -172,9 +172,9 @@ ru:
       badge:
         confirm_delete: "Вы уверены?"
       types:
-        success_passing_all_tests_from_category: "Успешное прохождение всех тестов из категории"
-        success_passing_test_from_the_first_try: "Успешное прохождение теста с первой попытки"
-        success_passing_all_tests_of_specified_level: "Успешное прохождение всех тестов заданного уровня"
+        all_tests_from_category: "Успешное прохождение всех тестов из категории"
+        first_try: "Успешное прохождение теста с первой попытки"
+        all_tests_of_specified_level: "Успешное прохождение всех тестов заданного уровня"
     questions:
       question:
         confirm_delete: "Вы уверены?"

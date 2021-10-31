@@ -201,9 +201,9 @@ en:
       badge:
         confirm_delete: "Are you sure?"
       types:
-        success_passing_all_tests_from_category: "Successful passing of all tests in the category"
-        success_passing_test_from_the_first_try: "Passing the test successfully on the first try"
-        success_passing_all_tests_of_specified_level: "Successful passing of all tests of a specified level"
+        all_tests_from_category: "Successful passing of all tests in the category"
+        first_try: "Passing the test successfully on the first try"
+        all_tests_of_specified_level: "Successful passing of all tests of a specified level"
     questions:
       question:
         confirm_delete: "Are you sure?"
