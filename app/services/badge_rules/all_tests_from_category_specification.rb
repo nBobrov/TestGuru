@@ -6,20 +6,17 @@ class BadgeRules::AllTestsFromCategorySpecification < BadgeRules::BadgeRulesSpec
 
   private
 
-  def passing_all_tests?(rule_value, test_passage)
-    category = Category.where(title:@rule_value)
-    tests_from_category(category).count == passed_test_from_category(category).count
+  def passing_all_tests?(category_name, test_passage)
+    Test.find_by_category(category_name).count == passed_test_from_category(category_name).count
   end
 
-  def tests_from_category(category)
-    Test.where(category: category)
-  end
+  def passed_test_from_category(category_name)
+    category = Category.where(title: category_name)
 
-  def passed_test_from_category(category)
     Test.where(category: category)
-      .joins(:test_passages)
-      .where(test_passages: { user: @test_passage.user, passed: true })
-      .distinct
+        .joins(:test_passages)
+        .where(test_passages: { user: @test_passage.user, passed: true })
+        .distinct
   end
 
 end
