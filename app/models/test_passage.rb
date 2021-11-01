@@ -8,8 +8,6 @@ class TestPassage < ApplicationRecord
   before_validation :before_validation_set_end_time, on: :create
   before_update :before_update_next_question
 
-  scope :passed, -> { where(level: 2..4) }
-
   def accept!(answer_ids)
     if correct_answer?(answer_ids)
       self.correct_questions += 1
