@@ -18,9 +18,12 @@
             <%= form.collection_check_boxes :answer_ids, @test_passage.current_question.answers, :id, :body, include_hidden: false do |b| %>
               <div class="form-check">
                 <%= form.label "answer_ids_#{b.object.id}", class: 'form-check-label' do %>
-                  <%= form.check_box "answer_ids_#{b.object.id}", class: 'form-check-input' %>
+                  <%= b.check_box id: "answer_ids_#{b.object.id}", class: 'form-check-input' %>
                   <%= b.object.body %>
                 <% end %>
+
+
+
               </div>
             <% end %>
 
