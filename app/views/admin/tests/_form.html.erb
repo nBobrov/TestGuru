@@ -26,6 +26,10 @@
                                    {class: 'form-control'}
         %>
       </p>
+      <p>
+        <%= form.label :passing_time %>
+        <%= form.number_field :passing_time, class: "form-control" %>
+      </p>
 
       <p><%= form.submit nil, class: 'btn btn-primary'  %></p>
     </div>

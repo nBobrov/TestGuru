@@ -11,9 +11,7 @@ class BadgeRules::AllTestsFromCategorySpecification < BadgeRules::BadgeRulesSpec
   end
 
   def passed_test_from_category(category_name)
-    category = Category.where(title: category_name)
-
-    Test.where(category: category)
+    Test.find_by_category(category_name)
         .joins(:test_passages)
         .where(test_passages: { user: @test_passage.user, passed: true })
         .distinct

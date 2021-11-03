@@ -6,6 +6,6 @@ class BadgeRules::BadgeRulesSpecification
   end
 
   def satisfies?
-    raise "#{method} undifined for #{self.class}"
+    raise "#{method} undefined for #{self.class}"
   end
 end

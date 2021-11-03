@@ -16,9 +16,9 @@ class BadgeRules::AllTestsOfSpecifiedLevelSpecification < BadgeRules::BadgeRules
 
   def passed_tests_of_specified_level(level)
     Test.where(level: level)
-      .joins(:test_passages)
-      .where(test_passages: { user: @test_passage.user, passed: true })
-      .distinct
+        .joins(:test_passages)
+        .where(test_passages: { user: @test_passage.user, passed: true })
+        .distinct
   end
 
 end

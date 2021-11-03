@@ -13,7 +13,7 @@ class TestPassagesController < ApplicationController
   def update
     @test_passage.accept!(params[:answer_ids])
 
-    if @test_passage.completed?
+    if @test_passage.completed? || @test_passage.time_over?
       TestsMailer.completed_test(@test_passage).deliver_now
       BadgeAssignService.new(@test_passage).call
       redirect_to result_test_passage_path(@test_passage)
@@ -21,7 +21,7 @@ class TestPassagesController < ApplicationController
       render :show
     end
   end
-  
+
   def gist
     client = GistQuestionService.new(@test_passage.current_question)
     gist_url = client.call
